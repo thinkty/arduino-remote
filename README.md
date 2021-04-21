@@ -14,3 +14,11 @@ So, I tried to use the NEC protocol ([API](https://github.com/Arduino-IRremote/A
 I was able to decode the address and command from the IR codes but it doesn't seem to be working.
 
 More details on my homepage - ( [🇺🇸 en]() / [🇰🇷 ko]() )
+
+## Photos
+
+![cam](https://imgur.com/zHnJXCt.png)
+
+![circuit](https://imgur.com/ZmkBiQp.png)
+
+The circuit editing software is [Circuit.io](https://www.circuito.io/).
