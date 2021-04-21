@@ -19,6 +19,8 @@ More details on my homepage - ( [🇺🇸 en]() / [🇰🇷 ko]() )
 
 ![cam](https://imgur.com/zHnJXCt.png)
 
+The lines are hideous but it does the job!
+
 ![circuit](https://imgur.com/ZmkBiQp.png)
 
 The circuit editing software is [Circuit.io](https://www.circuito.io/).
