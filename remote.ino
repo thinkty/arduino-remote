@@ -1,7 +1,7 @@
 // IR
+// LG has 28 data bits (= 8 bit address + 16 bit command + 4 bit parity)
 #define IR_SEND_PIN 8
 #include <IRremote.h>
-#include <IRremoteInt.h>
 IRData IRSendData;
 
 // Joystick
@@ -52,8 +52,8 @@ void readJoystick() {
     // Send all signals except for center as center is default
     // This allows sending the same signal in sequence
     if (current != CENTER) {
-      IrSender.sendLG(current, 32);
-      delay(100);
+      IrSender.sendNECMSB(current, 32, false);
+      delay(110);
     }
   }
 }
@@ -61,18 +61,18 @@ void readJoystick() {
 // Function to read from multiple (power, settings, confirm) push-buttons
 void readPushButton() {
   if (digitalRead(POWER_BUTTON) == HIGH) {
-    IrSender.sendLG(POWER_CMD, 32);
-    delay(100);
+    IrSender.sendNECMSB(POWER_CMD, 32, false);
+    delay(110);
   }
 
   if (digitalRead(SETTINGS_BUTTON) == HIGH) {
-    IrSender.sendLG(SETTINGS_CMD, 32);
-    delay(100);
+    IrSender.sendNECMSB(SETTINGS_CMD, 32, false);
+    delay(110);
   }
 
   if (digitalRead(CONFIRM_BUTTON) == HIGH) {
-    IrSender.sendLG(CONFIRM_CMD, 32);
-    delay(100);
+    IrSender.sendNECMSB(CONFIRM_CMD, 32, false);
+    delay(110);
   }
 }
 
@@ -82,8 +82,6 @@ void setup() {
   pinMode(CONFIRM_BUTTON, INPUT);
   pinMode(SETTINGS_BUTTON, INPUT);
   IrSender.begin(IR_SEND_PIN, ENABLE_LED_FEEDBACK);
-  IRSendData.flags = IRDATA_FLAGS_EMPTY;
-  IRSendData.protocol = LG;
   delay(1000);
 }
 
