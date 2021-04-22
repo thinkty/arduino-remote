@@ -1,5 +1,5 @@
 // IR
-// LG has 28 data bits (= 8 bit address + 16 bit command + 4 bit parity)
+// LG has data bits similar to NEC but in reverse (Most Significant Bit first)
 #define IR_SEND_PIN 8
 #include <IRremote.h>
 IRData IRSendData;
