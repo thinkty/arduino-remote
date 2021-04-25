@@ -13,7 +13,7 @@ After a bit of searching, I found out that LG used NEC (up until 2013, not sure 
 So, I tried to use the NEC protocol ([API](https://github.com/Arduino-IRremote/Arduino-IRremote/blob/48a3249cb810446e3d7b2d05d0c29a25214d5dc5/src/ir_NEC.cpp#L91)) but to avail.
 I was able to decode the address and command from the IR codes but it doesn't seem to be working.
 
-More details on my homepage - ( [🇺🇸 en]() / [🇰🇷 ko]() )
+More details on my homepage - ( [🇺🇸 en](https://thinkty.net/projects/infrared-remote-tv/) / [🇰🇷 ko](https://thinkty.net/ko/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/infrared-remote-tv-ko/) )
 
 ## Photos
 
